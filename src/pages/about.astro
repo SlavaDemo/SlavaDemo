@@ -1,0 +1,15 @@
+---
+import Link from "@components/Link.astro";
+import BaseLayout from "@layouts/baseLayout.astro";
+---
+
+<BaseLayout title="About page" description="This is the about page">
+	<section class="container about" aria-label="About me">
+		<img src="/images/headshot.jpg" alt="My Headshot" width="200" height="330">
+		<div class="content">
+			<h1 class="h1">My Blog</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eos rerum vero officia quidem nemo dolorem quibusdam ipsa tempore neque accusantium qui cum facilis, aperiam, molestias sed aspernatur perspiciatis adipisci harum eligendi, molestiae maiores iusto. Aperiam suscipit repudiandae nisi sunt!</p>
+			<Link href="mailto:slavakutozov@gmail.com" style="primary" text="Contact Me" />
+		</div>
+	</section>
+</BaseLayout>

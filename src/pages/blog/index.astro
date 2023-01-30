@@ -1,0 +1,27 @@
+---
+// Components imports
+import PostCard from "@components/PostCard.astro";
+import BaseLayout from "@layouts/baseLayout.astro";
+import { formatBlogPosts } from "src/js/utils";
+
+const allPosts = await Astro.glob("./*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+---
+
+<BaseLayout title="My Blog">
+<section class="container" aria-label="New Blog Post" aria-hidden="true" tabindex="-1">
+    <h1 class="h1">
+        New blog post!
+    </h1>
+    <div class="post-container">
+        {
+            formattedPosts.map((post: { frontmatter: any; url: any; }) => <PostCard
+             frontmatter={post.frontmatter}
+             url={post.url}
+             tagType="h2"
+             />)
+        }
+    </div>
+</section>
+</BaseLayout>
+
