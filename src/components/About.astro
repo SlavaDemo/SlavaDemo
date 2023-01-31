@@ -1,0 +1,15 @@
+---
+import { Image } from "@astrojs/image/components";
+
+---
+
+<section class="about-main">
+    <div class="profile-photo animate__animated animate__bounceInDown mt-4">
+        <Image src={`/images/headshot.jpg`} alt="Me" width={250} height={200} format={"avif"} /><br>
+    </div>
+    <div class="typed-items mt-4">
+        <span class="text-main-typed" id="name"></span><br>
+        <span class="text-main-typed" id="main-text"></span>
+    </div>
+</section>
+

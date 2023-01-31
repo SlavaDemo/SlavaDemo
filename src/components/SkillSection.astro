@@ -1,0 +1,25 @@
+---
+import Skill from "@components/Skill.astro";
+
+interface Props {
+    data: {
+        name:string,
+        image:string
+    }[],
+    text:string
+    style:string
+}
+
+const {data,style,text} = Astro.props as Props;
+
+---
+<section class="container hidden-alt skills-box-title mt-4">
+    <span>{text}</span>
+</section>
+<div class={`container-fluid glass skill-box mt-4 p-4 ${style}`}>
+    <div class="row">
+        {
+            data.map((skill) => <Skill name={skill.name} image={skill.image}/>)
+        }
+    </div>
+</div>

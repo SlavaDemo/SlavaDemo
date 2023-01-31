@@ -1,0 +1,15 @@
+---
+import { Image } from "@astrojs/image/components";
+
+interface Props {
+    name:string;
+    image:string;
+}
+
+const {name,image} = Astro.props as Props;
+---
+
+<div class="col">
+    <Image src={`/images/icons/${image}`} alt={name} width={80} height={20} format={"avif"}/>
+    <p>{name}</p>
+</div>

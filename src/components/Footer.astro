@@ -1,11 +1,11 @@
 ---
+import { Image } from "@astrojs/image/components";
 
 ---
-<footer>
+<footer class="animate__animated animate__bounceInUp">
     <small>
-        Copyright &copy; <span id="copyright">
-        </span>
-        rights reserved
+        Made with 
+	<Image src="/images/astro.svg" alt="Me" width={60} height={15} format={"avif"}/>
     </small>
 </footer>
 
